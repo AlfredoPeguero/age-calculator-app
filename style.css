@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
+:root {
+  --clr-primary-Purple: hsl(259, 100%, 65%);
+  --clr-primary-LightRed: hsl(0, 100%, 67%);
+
+  /* Neutral */
+  --clr-neutral-White: hsl(0, 0%, 100%);
+  --clr-neutral-offWhite: hsl(0, 0%, 94%);
+  --clr-neutral-lightGrey: hsl(0, 0%, 86%);
+  --clr-neutral-smokeyGrey: hsl(0, 1%, 44%);
+  --clr-neutral-offBlack: hsl(0, 0%, 8%);
+
+  /* FONT FAMILY */
+
+  --ff-poppins: "Poppins", sans-serif;
+
+  /* FONT SIZE */
+
+  --fs-inputs: 2rem;
+
+  /* FONT WEIGHT */
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-800: 800;
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+}
+.flex{
+  display: flex;
+  gap: var(--gap, 1rem)
+}
+body{
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--clr-neutral-offWhite);
+  font-family: var(--ff-poppins);
+}
+.container{
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+ 
+}
+.wrapper{
+  margin-top: 5rem;
+  max-width: 375px;
+  padding: 1rem;
+  background: var(--clr-neutral-White);
+  border-radius: 1rem 1rem 5rem 1rem;
+}
+.form{
+  flex-direction: column;
+}
+.date label{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.date label input{
+  border: 1px solid var(--clr-neutral-lightGrey);
+  padding: .75rem;
+  max-width: 4rem;
+  border-radius: .5rem;
+}
+/* MESSAGE ERROR */
+.date label.message-error{
+  color: var(--clr-primary-LightRed);
+}
+.date label input.message-error{
+  border: 1px solid var(--clr-primary-LightRed);
+  
+}
+
+.date label.message-error:after{
+  position: absolute;
+  bottom: -40%;
+  left: 5%;
+  content: "this field is required";
+  font-size: .75em;
+  color: var(--clr-primary-LightRed);
+}
+.date label.message-error-year:after{
+  position: absolute;
+  bottom: -40%;
+  left: 5%;
+  content: "must be in the past";
+  font-size: .75em;
+  color: var(--clr-primary-LightRed);
+}
+
+.date label.message-error-month:after{
+  position: absolute;
+  bottom: -40%;
+  left: 5%;
+  content: "must be a valid month";
+  font-size: .75em;
+  color: var(--clr-primary-LightRed);
+}
+.date label.message-error-day:after{
+  position: absolute;
+  bottom: -40%;
+  left: 5%;
+  content: "must be in a valid day";
+  font-size: .75em;
+  color: var(--clr-primary-LightRed);
+}
+.break-line{
+  border: 1px solid hsla(0, 0%, 49%, 0.2);
+}
+.btn_box{
+  margin-top: 3.5rem;
+  position: relative;
+}
+.btn{
+  position: absolute;
+  right: 40%;
+  top: -130%;
+  cursor: pointer;
+  border: none;
+  padding: .75rem;
+  background: var(--clr-primary-Purple);
+  border-radius: 50%;
+}
+.results_box{
+  margin-top: 6rem;
+}
+.results_box span{
+  color: var(--clr-primary-Purple);
+}
+.results_box h2{
+  font-size: 3rem;
+  margin-top: -2rem;
+}
