@@ -69,7 +69,7 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   font-weight: var(--fw-800);
-  text-transform: uppercase;
+  
   letter-spacing: 0.1rem;
 }
 .date label input {
@@ -91,11 +91,12 @@ body {
 
 .date label.message-error:after {
   position: absolute;
-  bottom: -40%;
+  bottom: -45%;
   left: 5%;
   content: "this field is required";
   font-size: 0.75em;
   color: var(--clr-primary-LightRed);
+  font-weight: var(--fw-400);
 }
 .date label.message-error-year:after {
   position: absolute;
