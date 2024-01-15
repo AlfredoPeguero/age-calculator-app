@@ -25,7 +25,7 @@
   --fw-800: 800;
 }
 
-img{
+img {
   display: block;
   width: 100%;
 }
@@ -38,110 +38,150 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   appearance: textfield;
 }
-.flex{
+.flex {
   display: flex;
-  gap: var(--gap, 1rem)
+  gap: var(--gap, 1rem);
 }
-body{
+body {
   min-height: 100vh;
   min-height: 100svh;
   background: var(--clr-neutral-offWhite);
   font-family: var(--ff-poppins);
 }
-.container{
+.container {
   align-items: center;
   justify-content: center;
   padding: 1rem;
- 
 }
-.wrapper{
+.wrapper {
   margin-top: 5rem;
   max-width: 375px;
   padding: 1rem;
   background: var(--clr-neutral-White);
   border-radius: 1rem 1rem 5rem 1rem;
 }
-.form{
+.form {
   flex-direction: column;
 }
-.date label{
+.date label {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  font-weight: var(--fw-800);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
-.date label input{
+.date label input {
   border: 1px solid var(--clr-neutral-lightGrey);
-  padding: .75rem;
+  padding: 0.75rem;
   max-width: 4rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+}
+.date label input::placeholder {
+  font-weight: var(--fw-800);
 }
 /* MESSAGE ERROR */
-.date label.message-error{
+.date label.message-error {
   color: var(--clr-primary-LightRed);
 }
-.date label input.message-error{
+.date label input.message-error {
   border: 1px solid var(--clr-primary-LightRed);
-  
 }
 
-.date label.message-error:after{
+.date label.message-error:after {
   position: absolute;
   bottom: -40%;
   left: 5%;
   content: "this field is required";
-  font-size: .75em;
+  font-size: 0.75em;
   color: var(--clr-primary-LightRed);
 }
-.date label.message-error-year:after{
+.date label.message-error-year:after {
   position: absolute;
   bottom: -40%;
   left: 5%;
   content: "must be in the past";
-  font-size: .75em;
+  font-size: 0.75em;
   color: var(--clr-primary-LightRed);
 }
 
-.date label.message-error-month:after{
+.date label.message-error-month:after {
   position: absolute;
   bottom: -40%;
   left: 5%;
   content: "must be a valid month";
-  font-size: .75em;
+  font-size: 0.75em;
   color: var(--clr-primary-LightRed);
 }
-.date label.message-error-day:after{
+.date label.message-error-day:after {
   position: absolute;
   bottom: -40%;
   left: 5%;
   content: "must be in a valid day";
-  font-size: .75em;
+  font-size: 0.75em;
   color: var(--clr-primary-LightRed);
 }
-.break-line{
+.break-line {
   border: 1px solid hsla(0, 0%, 49%, 0.2);
 }
-.btn_box{
+.btn_box {
   margin-top: 3.5rem;
   position: relative;
 }
-.btn{
+.btn {
   position: absolute;
   right: 40%;
   top: -130%;
   cursor: pointer;
   border: none;
-  padding: .75rem;
+  padding: 0.75rem;
   background: var(--clr-primary-Purple);
   border-radius: 50%;
 }
-.results_box{
+.btn:hover {
+  background: var(--clr-neutral-offBlack);
+}
+.results_box {
   margin-top: 6rem;
 }
-.results_box span{
+.results_box span {
   color: var(--clr-primary-Purple);
 }
-.results_box h2{
+.results_box h2 {
   font-size: 3rem;
   margin-top: -2rem;
+  color: hsl(0, 0%, 8%);
+}
+@media (min-width: 75rem) {
+  .wrapper {
+    max-width: 40rem;
+    max-height: 35rem;
+    padding: 3rem;
+    padding-inline-end: 12rem;
+    border-radius: 1rem 1rem 12rem 1rem;
+  }
+  .date label {
+    color: var(--clr-neutral-smokeyGrey);
+  }
+  .date label input {
+    font-size: 2rem;
+    max-width: 8rem;
+  }
+
+  .btn {
+    right: -20%;
+    top: -250%;
+    padding: 1.75rem;
+  }
+  .break-line {
+    width: 45rem;
+  }
+  .results_box {
+    margin-top: 8rem;
+  }
+  .results_box h2 {
+    font-size: 7rem;
+    margin-top: -7rem;
+  }
 }
